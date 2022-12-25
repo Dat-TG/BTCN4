@@ -1,7 +1,7 @@
 -- ----------------------------
 -- Table structure for Categories
 -- ----------------------------
-DROP TABLE IF EXISTS "Categories";
+DROP TABLE IF EXISTS "Categories"  CASCADE;
 CREATE TABLE "Categories" (
   "CategoryID" int4 NOT NULL,
   "CategoryName" varchar(15) NOT NULL
@@ -25,7 +25,7 @@ COMMIT;
 -- ----------------------------
 -- Table structure for Customers
 -- ----------------------------
-DROP TABLE IF EXISTS "Customers";
+DROP TABLE IF EXISTS "Customers"  CASCADE;
 CREATE TABLE "Customers" (
   "CusID" int4 NOT NULL,
   "CustomerName" varchar(50) NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE "Customers" (
 -- ----------------------------
 -- Table structure for Order Details
 -- ----------------------------
-DROP TABLE IF EXISTS "Order Details";
+DROP TABLE IF EXISTS "Order Details"  CASCADE;
 CREATE TABLE "Order Details" (
   "OrderID" int4 NOT NULL,
   "ProductID" int4 NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE "Order Details" (
 -- ----------------------------
 -- Table structure for Orders
 -- ----------------------------
-DROP TABLE IF EXISTS "Orders";
+DROP TABLE IF EXISTS "Orders"  CASCADE;
 CREATE TABLE "Orders" (
   "OrderID" int4 NOT NULL,
   "OrderDate" timestamp NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE "Orders" (
 -- ----------------------------
 -- Table structure for Products
 -- ----------------------------
-DROP TABLE IF EXISTS "Products";
+DROP TABLE IF EXISTS "Products"  CASCADE;
 CREATE TABLE "Products" (
   "ProductID" int4 NOT NULL,
   "ProductName" varchar(40) NOT NULL,
@@ -158,11 +158,11 @@ COMMIT;
 -- ----------------------------
 -- Table structure for Users
 -- ----------------------------
-DROP TABLE IF EXISTS "Users";
+DROP TABLE IF EXISTS "Users"  CASCADE;
 CREATE TABLE "Users" (
   "UserID" int4 NOT NULL,
   "Username" varchar(50) NOT NULL,
-  "Password" varchar(50) NOT NULL,
+  "Password" varchar(255) NOT NULL,
   "FullName" varchar(50) NOT NULL,
   "Token" varchar(255),
   "Address" varchar(255) NOT NULL

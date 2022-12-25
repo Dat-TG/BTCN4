@@ -1,3 +1,4 @@
+
 $(function () {
     $("#name").on('input', function () {
         var ok = checkUpperCase($(this).val());
@@ -50,6 +51,29 @@ $(function () {
             $("#retype_password").get(0).setCustomValidity("");
             $("#retype_password").get(0).reportValidity();
         }
+    });
+    $("#RegisterForm").submit(function (event) {
+        event.preventDefault();
+        $.ajax({
+            url: "https://localhost:3113",
+            crossDomain: true,
+            method: "POST",
+            data: {
+                Username: $('#username').val(),
+                FullName: $('#name').val(),
+                Address: $('#address').val(),
+                Password: $('#password').val()
+            },
+            error: function (err) {
+                console.log("error", err);
+            }
+        }).done(function()  {
+            console.log("Success.");
+            window.location.href="http://localhost:20454/user/login";
+        }).fail(function()  {
+            console.log("Sorry. Server unavailable. ");
+            window.location.href="http://localhost:20454/user/login";
+        }); 
     });
 })
 

@@ -9,3 +9,13 @@ Content-Type: application/json
     "Username": "ddawst",
     "Password": "123456"
 }
+
+###
+
+POST https://localhost:3113
+Content-Type: application/json
+
+{
+    "Username": "ddawst",
+    "Password": "123456"
+}

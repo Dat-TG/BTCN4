@@ -7,13 +7,13 @@
                         <div class="row justify-content-center">
                             <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-                                <form class="mx-1 mx-md-4" method="POST" action="/register" id="RegisterForm" autocomplete="on">
+                                <form class="mx-1 mx-md-4" id="RegisterForm" autocomplete="on" action="https://localhost:3113" method="POST">
 
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
                                             <label class="form-label" for="username">Username</label>
-                                            <input type="text" id="username" name="username" alt="User" class="form-control" value="{{data.username}}" required/>
+                                            <input type="text" id="username" name="Username" alt="User" class="form-control" value="{{data.Username}}" required/>
                                         </div>
                                     </div>
 
@@ -24,25 +24,16 @@
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-address-card fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <label class="form-label" for="name">Your name</label>
-                                            <input type="text" id="name" name="name" class="form-control" value="{{data.name}}" required/>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fa fa-birthday-cake fa-lg me-3 fa-fw"></i>
-                                        <div class="form-outline flex-fill mb-0">
-                                            <label class="form-label" for="dob">Date of birth</label>
-                                            <input type="date" id="dob" name="dob"
-                                                class="form-control" value="{{data.dob}}" required/>
+                                            <label class="form-label" for="name">Your Full Name</label>
+                                            <input type="text" id="name" name="FullName" class="form-control" value="{{data.FullName}}" required/>
                                         </div>
                                     </div>
 
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <label class="form-label" for="email">Your Email</label>
-                                            <input type="email" id="email" name="email" class="form-control" value="{{data.email}}" required />
+                                            <label class="form-label" for="email">Your Address</label>
+                                            <input type="text" id="address" name="Address" class="form-control" value="{{data.Address}}" required />
                                         </div>
                                     </div>
 
@@ -50,7 +41,7 @@
                                         <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
                                             <label class="form-label" for="password">Password</label>
-                                            <input type="password" id="password" name="password" class="form-control" value="{{data.password}}" required/>
+                                            <input type="password" id="password" name="Password" class="form-control" value="{{data.Password}}" required/>
                                             
                                         </div>
                                     </div>

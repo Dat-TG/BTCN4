@@ -9,11 +9,11 @@ const cookieParser=require('cookie-parser');
 const app = express();
 const port = process.env.PORT || 20454;
 const passport=require('passport');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const cors = require('cors');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-
+app.use(cors());
 
 //Router and model
 const UserRouter=require('./routers/user.r');
@@ -55,8 +55,6 @@ app.use('/user',UserRouter);
 app.use('/', async(req, res, next) => {
     res.render('home');
 });
-
-
 
 app.use((err, req, res, next) => {
     const statusCode = err.statusCode | 500;
