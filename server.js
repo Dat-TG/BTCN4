@@ -7,9 +7,7 @@ const session=require('express-session');
 const flash=require('connect-flash');
 const cookieParser=require('cookie-parser');
 const app = express();
-const authServer=express();
 const port = process.env.PORT || 20454;
-const portAuth=process.env.PORT_AUTH || 3113;
 const passport=require('passport');
 const bodyParser = require('body-parser')
 app.use(bodyParser.json());
@@ -55,11 +53,7 @@ app.set('views', path.join(__dirname, '/views'))
 
 app.use('/user',UserRouter);
 app.use('/', async(req, res, next) => {
-    res.send('home');
-});
-
-authServer.use('/', async(req, res, next) => {
-    res.send('home auth');
+    res.render('home');
 });
 
 
@@ -73,8 +67,4 @@ app.use((err, req, res, next) => {
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
-})
-
-authServer.listen(portAuth, () => {
-    console.log(`Auth server is runnig on port ${portAuth}`);
 })

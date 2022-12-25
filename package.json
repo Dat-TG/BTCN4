@@ -4,7 +4,9 @@
   "description": "Bai tap ca nhan 4",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "server":"nodemon server.js",
+    "authServer":"nodemon authServer.js",
+    "dev": "concurrently --raw  \"npm run server\" \"npm run authServer \"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
