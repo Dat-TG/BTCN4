@@ -17,9 +17,19 @@
             </a>
             <!-- Left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
+                    </a>
+                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {{#each clist}}
+                        <li><a class="dropdown-item" href="/Categories/{{CatID}}">{{CatName}}</a></li>
+                        {{/each}}
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" data-mdb-toggle="modal" data-mdb-target="#modalForm">Add new Category</a></li>
+                    </ul>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
