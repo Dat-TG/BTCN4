@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 exports.getLogin = async (req, res, next) => {
     try {
-        res.send('login');
+        res.render('login');
     } catch (err) {
         next(err);
     }
@@ -21,3 +21,10 @@ exports.postLogin = async (req, res, next) => {
         next(err);
     }
 };
+exports.getRegister = async (req, res, next) => {
+    try {
+        res.render('register');
+    } catch (err) {
+        next(err);
+    }
+}
