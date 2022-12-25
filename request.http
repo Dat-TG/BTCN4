@@ -1,0 +1,11 @@
+GET http://localhost:20454 HTTP/1.1
+
+###
+
+POST http://localhost:20454/user/login
+Content-Type: application/json
+
+{
+    "Username": "ddawst",
+    "Password": "123456"
+}
